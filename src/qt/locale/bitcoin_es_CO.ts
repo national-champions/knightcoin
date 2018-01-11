@@ -126,8 +126,8 @@
         <translation>Abrir &amp;URL...</translation>
     </message>
     <message>
-        <source>Send coins to a Litecoin address</source>
-        <translation>Enviando monedas a una dirección de Litecoin</translation>
+        <source>Send coins to a KnightCoin address</source>
+        <translation>Enviando monedas a una dirección de KnightCoin</translation>
     </message>
     <message>
         <source>Change the passphrase used for wallet encryption</source>
@@ -146,8 +146,8 @@
         <translation>&amp;Verificar Mensaje...</translation>
     </message>
     <message>
-        <source>Litecoin</source>
-        <translation>Litecoin</translation>
+        <source>KnightCoin</source>
+        <translation>KnightCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -296,8 +296,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>Litecoin Core</source>
-        <translation>Litecoin Core</translation>
+        <source>KnightCoin Core</source>
+        <translation>KnightCoin Core</translation>
     </message>
     <message>
         <source>Insufficient funds</source>

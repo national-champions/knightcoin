@@ -38,7 +38,7 @@ void RPCNestedTests::rpcNestedTests()
     // could be moved to a more generic place when we add more tests on QT level
     tableRPC.appendCommand("rpcNestedTest", &vRPCCommands[0]);
     ClearDatadirCache();
-    std::string path = QDir::tempPath().toStdString() + "/" + strprintf("test_litecoin_qt_%lu_%i", (unsigned long)GetTime(), (int)(GetRand(100000)));
+    std::string path = QDir::tempPath().toStdString() + "/" + strprintf("test_knightcoin_qt_%lu_%i", (unsigned long)GetTime(), (int)(GetRand(100000)));
     QDir dir(QString::fromStdString(path));
     dir.mkpath(".");
     gArgs.ForceSetArg("-datadir", path);
@@ -79,7 +79,7 @@ void RPCNestedTests::rpcNestedTests()
     QVERIFY(result == result2);
 
     RPCConsole::RPCExecuteCommandLine(result, "getblock(getbestblockhash())[tx][0]", &filtered);
-    QVERIFY(result == "97ddfbbae6be97fd6cdf3e7ca13232a3afff2353e29badfab7f73011edd4ced9");
+    QVERIFY(result == "cce50985f448755e4f35d9c7e5caa5dd05e0b97cd176df21b9f8f50e8ea7b351");
     QVERIFY(filtered == "getblock(getbestblockhash())[tx][0]");
 
     RPCConsole::RPCParseCommandLine(result, "importprivkey", false, &filtered);

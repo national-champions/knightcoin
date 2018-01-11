@@ -14,8 +14,8 @@
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <source>Litecoin</source>
-        <translation>Litecoin</translation>
+        <source>KnightCoin</source>
+        <translation>KnightCoin</translation>
     </message>
     </context>
 <context>
@@ -156,8 +156,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>Litecoin Core</source>
-        <translation>Litecoin Jezrga</translation>
+        <source>KnightCoin Core</source>
+        <translation>KnightCoin Jezrga</translation>
     </message>
     </context>
 </TS>

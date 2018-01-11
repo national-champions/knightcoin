@@ -48,8 +48,8 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  */
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "NY Times 05/Oct/2011 Steve Jobs, Apple’s Visionary, Dies at 56";
-    const CScript genesisOutputScript = CScript() << ParseHex("040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9") << OP_CHECKSIG;
+    const char* pszTimestamp = "Some newspaper headline that describes something that happened today";
+    const CScript genesisOutputScript = CScript() << ParseHex("04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
 
@@ -115,22 +115,22 @@ public:
         pchMessageStart[1] = 0xc0;
         pchMessageStart[2] = 0xb6;
         pchMessageStart[3] = 0xdb;
-        nDefaultPort = 9333;
+        nDefaultPort = 64321;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1317972665, 2084524493, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1515617949, 1920329, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x12a765e31ffd4059bada1e25190f6e98c99d9714d334efa41a195a7e7e04bfe2"));
-        assert(genesis.hashMerkleRoot == uint256S("0x97ddfbbae6be97fd6cdf3e7ca13232a3afff2353e29badfab7f73011edd4ced9"));
+        assert(consensus.hashGenesisBlock == uint256S("0x41025a0df4a4054182e2e572cc78038f6564f78de723e7ff6b7e6ea0a6bd210d"));
+        assert(genesis.hashMerkleRoot == uint256S("0xcce50985f448755e4f35d9c7e5caa5dd05e0b97cd176df21b9f8f50e8ea7b351"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-        vSeeds.emplace_back("seed-a.litecoin.loshan.co.uk", true);
+        vSeeds.emplace_back("seed-a.knightcoin.loshan.co.uk", true);
         vSeeds.emplace_back("dnsseed.thrasher.io", true);
-        vSeeds.emplace_back("dnsseed.litecointools.com", true);
-        vSeeds.emplace_back("dnsseed.litecoinpool.org", true);
+        vSeeds.emplace_back("dnsseed.knightcointools.com", true);
+        vSeeds.emplace_back("dnsseed.knightcoinpool.org", true);
         vSeeds.emplace_back("dnsseed.koin-project.com", false);
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,48);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,18);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
         base58Prefixes[SCRIPT_ADDRESS2] = std::vector<unsigned char>(1,50);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,176);
@@ -217,19 +217,19 @@ public:
         pchMessageStart[1] = 0xd2;
         pchMessageStart[2] = 0xc8;
         pchMessageStart[3] = 0xf1;
-        nDefaultPort = 19335;
+        nDefaultPort = 64322;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1486949366, 293345, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1486949366, 720054, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x4966625a4b2851d9fdee139e56211a0d88575f59ed816ff5e6a63deb4e3e29a0"));
-        assert(genesis.hashMerkleRoot == uint256S("0x97ddfbbae6be97fd6cdf3e7ca13232a3afff2353e29badfab7f73011edd4ced9"));
+        assert(consensus.hashGenesisBlock == uint256S("0x3fe29f799bc5868f2176b3be2c4311e8bf3acaa435617f038e9ca855eaf230fa"));
+        assert(genesis.hashMerkleRoot == uint256S("0xcce50985f448755e4f35d9c7e5caa5dd05e0b97cd176df21b9f8f50e8ea7b351"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.emplace_back("testnet-seed.litecointools.com", true);
-        vSeeds.emplace_back("seed-b.litecoin.loshan.co.uk", true);
+        vSeeds.emplace_back("testnet-seed.knightcointools.com", true);
+        vSeeds.emplace_back("seed-b.knightcoin.loshan.co.uk", true);
         vSeeds.emplace_back("dnsseed-testnet.thrasher.io", true);
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
@@ -303,10 +303,10 @@ public:
         nDefaultPort = 19444;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1296688602, 0, 0x207fffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1296688602, 2, 0x207fffff, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x530827f38f93b43ed12af0b3ad25a288dc02ed74d6d7857862df51fc56c416f9"));
-        assert(genesis.hashMerkleRoot == uint256S("0x97ddfbbae6be97fd6cdf3e7ca13232a3afff2353e29badfab7f73011edd4ced9"));
+        assert(consensus.hashGenesisBlock == uint256S("0xf22b61ee9af73a2fd54034b274a6251b56121486ff50af15967e4e062c20016e"));
+        assert(genesis.hashMerkleRoot == uint256S("0xcce50985f448755e4f35d9c7e5caa5dd05e0b97cd176df21b9f8f50e8ea7b351"));
 
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();      //!< Regtest mode doesn't have any DNS seeds.
