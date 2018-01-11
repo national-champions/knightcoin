@@ -7,6 +7,7 @@ https://knightco.in
 
 What is KnightCoin?
 ----------------
+Not ready for primetime just yet...
 
 KnightCoin is an experimental digital currency that enables instant payments to
 anyone, anywhere in the world. KnightCoin uses peer-to-peer technology to operate
