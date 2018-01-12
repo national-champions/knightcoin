@@ -76,10 +76,11 @@ src/qt/test/moc*.cpp
 Makefile
 knightcoin-qt
 Knightcoin-Qt.app
+knightcoin-Qt.app
 
 # Unit-tests
 Makefile.test
-litecoin-qt_test
+knightcoin-qt_test
 
 # Resources cpp
 qrc_*.cpp
@@ -92,7 +93,7 @@ build
 *.gcno
 *.gcda
 /*.info
-test_litecoin.coverage/
+test_knightcoin.coverage/
 total.coverage/
 coverage_percent.txt
 

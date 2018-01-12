@@ -3,7 +3,7 @@ KnightCoin Core integration/staging tree
 
 [![Build Status](https://travis-ci.org/knightcoin-project/knightcoin.svg?branch=master)](https://travis-ci.org/knightcoin-project/knightcoin)
 
-https://knightco.in
+https://knightcoin.org
 
 What is KnightCoin?
 ----------------

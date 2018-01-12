@@ -118,19 +118,19 @@ public:
         nDefaultPort = 64321;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1515617949, 1920329, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1515723426, 776309, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x41025a0df4a4054182e2e572cc78038f6564f78de723e7ff6b7e6ea0a6bd210d"));
+        assert(consensus.hashGenesisBlock == uint256S("0x2bf9eb77724f003dddc5e41e7a67199835e7cbbe89c3ce1cdd5467f6122065d0"));
         assert(genesis.hashMerkleRoot == uint256S("0xcce50985f448755e4f35d9c7e5caa5dd05e0b97cd176df21b9f8f50e8ea7b351"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-        vSeeds.emplace_back("seed-a.knightcoin.loshan.co.uk", true);
-        vSeeds.emplace_back("dnsseed.thrasher.io", true);
-        vSeeds.emplace_back("dnsseed.knightcointools.com", true);
-        vSeeds.emplace_back("dnsseed.knightcoinpool.org", true);
-        vSeeds.emplace_back("dnsseed.koin-project.com", false);
+        vSeeds.emplace_back("knightco.in", true);
+        // vSeeds.emplace_back("dnsseed.thrasher.io", true);
+        // vSeeds.emplace_back("dnsseed.knightcointools.com", true);
+        // vSeeds.emplace_back("dnsseed.knightcoinpool.org", true);
+        // vSeeds.emplace_back("dnsseed.koin-project.com", false);
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,18);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,45);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
         base58Prefixes[SCRIPT_ADDRESS2] = std::vector<unsigned char>(1,50);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,176);
